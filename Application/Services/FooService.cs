@@ -11,7 +11,6 @@ namespace Application.Services;
 
 public class FooService : IFooService
 {
-    private readonly IFooRepository _fooRepository;
     private readonly CreateFooCommandHandler _createFooCommandHandler;
     private readonly UpdateFooCommandHandler _updateFooCommandHandler;
     private readonly DeleteFooCommandHandler _deleteFooCommandHandler;
@@ -19,14 +18,12 @@ public class FooService : IFooService
     private readonly GetFooByIdQueryHandler _getFooByIdQueryHandler;
 
     public FooService(
-        IFooRepository fooRepository,
         CreateFooCommandHandler createFooCommandHandler,
         UpdateFooCommandHandler updateFooCommandHandler,
         DeleteFooCommandHandler deleteFooCommandHandler,
         GetFooQueryHandler getFooQueryHandler,
         GetFooByIdQueryHandler getFooByIdQueryHandler)
     {
-        _fooRepository = fooRepository;
         _createFooCommandHandler = createFooCommandHandler;
         _updateFooCommandHandler = updateFooCommandHandler;
         _deleteFooCommandHandler = deleteFooCommandHandler;
