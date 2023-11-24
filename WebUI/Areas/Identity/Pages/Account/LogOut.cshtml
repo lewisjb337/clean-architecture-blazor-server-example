@@ -1,7 +1,8 @@
 ﻿@page
 @using Microsoft.AspNetCore.Identity
+@using Persistence.Models;
 @attribute [IgnoreAntiforgeryToken]
-@inject SignInManager<IdentityUser> SignInManager
+@inject SignInManager<UserProfile> SignInManager
 @functions {
     public async Task<IActionResult> OnPost()
     {
