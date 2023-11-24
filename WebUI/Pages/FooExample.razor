@@ -1,0 +1,35 @@
+﻿@page "/foo"
+
+<PageTitle>Foo Example</PageTitle>
+
+<h3>Foo List</h3>
+
+@if (foos != null)
+{
+    <ul>
+        @foreach (var foo in foos)
+        {
+            <li>
+                <strong>@foo.Title</strong>
+                <p>ID: @foo.Id</p>
+                <button @onclick="() => GetFooDetails(foo.Id)">Get Details</button>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No foos available.</p>
+}
+
+@if (selectedFoo != null)
+{
+    <h4>Selected Foo Details</h4>
+    <p>ID: @selectedFoo.Id</p>
+    <p>Title: @selectedFoo.Title</p>
+    <p>Is Completed: @selectedFoo.IsCompleted</p>
+}
+else
+{
+    <p>No foo selected.</p>
+}
