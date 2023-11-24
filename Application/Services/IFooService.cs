@@ -1,16 +1,16 @@
-﻿using Application.Features.Tasks.Commands;
-using Domain.Entities;
+﻿using Application.DTOs;
+using Application.Features.Foo.Commands.Create;
+using Application.Features.Foo.Commands.Delete;
+using Application.Features.Foo.Commands.Update;
+using Domain.Entities.Foo;
 
 namespace Application.Services;
 
 public interface IFooService
 {
-    List<Foo> GetFoos();
-    Foo GetFooById(int id);
-    void AddFoo(CreateFooCommand command);
-    void UpdateFoo(UpdateFooCommand command);
-    void DeleteFoo(DeleteFooCommand command);
-
-    List<Foo> GetFooQuery();
-    Foo GetFooByIdQuery(int id);
+    List<FooDTO> GetFooQuery(CancellationToken cancellationToken = default);
+    FooEntity GetFooByIdQuery(int id, CancellationToken cancellationToken = default);
+    void AddFoo(CreateFooCommand command, CancellationToken cancellationToken = default);
+    void UpdateFoo(UpdateFooCommand command, CancellationToken cancellationToken = default);
+    void DeleteFoo(DeleteFooCommand command, CancellationToken cancellationToken = default);
 }

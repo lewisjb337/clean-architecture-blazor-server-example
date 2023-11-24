@@ -1,4 +1,4 @@
-﻿using Domain.Entities;
+﻿using Domain.Entities.Foo;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Models;
@@ -14,7 +14,7 @@ namespace Persistence.Contexts
         {
         }
 
-        public DbSet<Foo> Foo { get; set; }
+        public DbSet<FooEntity> Foo { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

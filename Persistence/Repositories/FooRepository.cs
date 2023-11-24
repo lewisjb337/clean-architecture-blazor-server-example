@@ -1,17 +1,17 @@
-﻿using Domain.Entities;
+﻿using Domain.Entities.Foo;
 
 namespace Persistence.Repositories;
 
 public class FooRepository : IFooRepository
 {
-    private static readonly List<Foo> _Foos = new();
+    private static readonly List<FooEntity> _Foos = new();
 
-    public List<Foo> GetFoos()
+    public List<FooEntity> GetFoos(CancellationToken cancellationToken)
     {
         return _Foos;
     }
 
-    public Foo GetFooById(int id)
+    public FooEntity GetFooById(int id, CancellationToken cancellationToken)
     {
         var foo = _Foos.FirstOrDefault(t => t.Id == id);
 
@@ -21,12 +21,12 @@ public class FooRepository : IFooRepository
             throw new NullReferenceException($"Could not find data for Foo with id: {id}");
     }
 
-    public void AddFoo(Foo Foo)
+    public void AddFoo(FooEntity Foo, CancellationToken cancellationToken)
     {
         _Foos.Add(Foo);
     }
 
-    public void UpdateFoo(Foo Foo)
+    public void UpdateFoo(FooEntity Foo, CancellationToken cancellationToken)
     {
         var existingFoo = _Foos.FirstOrDefault(t => t.Id == Foo.Id);
         if (existingFoo != null)
@@ -36,7 +36,7 @@ public class FooRepository : IFooRepository
         }
     }
 
-    public void DeleteFoo(int id)
+    public void DeleteFoo(int id, CancellationToken cancellationToken)
     {
         var FooToRemove = _Foos.FirstOrDefault(t => t.Id == id);
         if (FooToRemove != null)

@@ -1,6 +1,10 @@
-﻿using Application.Features.Tasks.Commands;
-using Application.Features.Tasks.Queries;
-using Domain.Entities;
+﻿using Application.DTOs;
+using Application.Features.Foo.Commands.Create;
+using Application.Features.Foo.Commands.Delete;
+using Application.Features.Foo.Commands.Update;
+using Application.Features.Foo.Queries.Get;
+using Application.Features.Foo.Queries.GetById;
+using Domain.Entities.Foo;
 using Persistence.Repositories;
 
 namespace Application.Services;
@@ -30,41 +34,36 @@ public class FooService : IFooService
         _getFooByIdQueryHandler = getFooByIdQueryHandler;
     }
 
-    public List<Foo> GetFoos()
-    {
-        return _fooRepository.GetFoos();
-    }
-
-    public Foo GetFooById(int id)
-    {
-        return _fooRepository.GetFooById(id);
-    }
-
-    public void AddFoo(CreateFooCommand command)
-    {
-        _createFooCommandHandler.Handle(command);
-    }
-
-    public void UpdateFoo(UpdateFooCommand command)
-    {
-        _updateFooCommandHandler.Handle(command);
-    }
-
-    public void DeleteFoo(DeleteFooCommand command)
-    {
-        _deleteFooCommandHandler.Handle(command);
-    }
-
-    public List<Foo> GetFooQuery()
+    public List<FooDTO> GetFooQuery(CancellationToken cancellationToken)
     {
         var result = _getFooQueryHandler.Handle();
-        return result.Foos;
+        return result.Foos.Select(x => new FooDTO
+        {
+            Id = x.Id,
+            Title = x.Title,
+            IsCompleted = x.IsCompleted
+        }).ToList();
     }
 
-    public Foo GetFooByIdQuery(int id)
+    public FooEntity GetFooByIdQuery(int id, CancellationToken cancellationToken)
     {
         var query = new GetFooByIdQuery { FooId = id };
         var result = _getFooByIdQueryHandler.Handle(query);
         return result.Foo;
+    }
+
+    public void AddFoo(CreateFooCommand command, CancellationToken cancellationToken)
+    {
+        _createFooCommandHandler.Handle(command);
+    }
+
+    public void UpdateFoo(UpdateFooCommand command, CancellationToken cancellationToken)
+    {
+        _updateFooCommandHandler.Handle(command);
+    }
+
+    public void DeleteFoo(DeleteFooCommand command, CancellationToken cancellationToken)
+    {
+        _deleteFooCommandHandler.Handle(command);
     }
 }

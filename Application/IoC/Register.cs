@@ -1,5 +1,8 @@
-﻿using Application.Features.Tasks.Commands;
-using Application.Features.Tasks.Queries;
+﻿using Application.Features.Foo.Commands.Create;
+using Application.Features.Foo.Commands.Delete;
+using Application.Features.Foo.Commands.Update;
+using Application.Features.Foo.Queries.Get;
+using Application.Features.Foo.Queries.GetById;
 using Application.Services;
 using Microsoft.Extensions.DependencyInjection;
 
