@@ -1,4 +1,4 @@
-﻿using Domain.Entities;
+﻿using Domain.Entities.Foo;
 using Persistence.Repositories;
 
 namespace Application.Features.Foo.Commands.Create;
@@ -14,7 +14,7 @@ public class CreateFooCommandHandler
 
     public void Handle(CreateFooCommand command)
     {
-        var newFoo = new Foo { Title = command.Title, IsCompleted = false };
+        var newFoo = new FooEntity { Title = command.Title, IsCompleted = false };
         _fooRepository.AddFoo(newFoo);
     }
 }
