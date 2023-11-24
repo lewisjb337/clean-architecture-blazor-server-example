@@ -6,6 +6,7 @@ using Persistence.IoC;
 using Persistence.Contexts;
 using UserAdmin.Database.Models;
 using WebUI.Areas.Identity;
+using Persistence.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration
@@ -17,7 +18,7 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<UserProfile>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
