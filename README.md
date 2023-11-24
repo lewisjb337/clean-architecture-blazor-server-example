@@ -1,2 +1,2 @@
-# clean-architecture-blazor-server-example
+# Clean Architecture Blazor Server Example
  
