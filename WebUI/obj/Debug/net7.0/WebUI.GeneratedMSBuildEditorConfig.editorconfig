@@ -9,53 +9,55 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebUI
 build_property.RootNamespace = WebUI
-build_property.ProjectDir = C:\Users\lewis.baxter\source\repos\api\Clean Architecture - Basic Example\WebUI\
+build_property.ProjectDir = C:\Users\lewis\Documents\GitHub\clean-architecture-blazor-server-example\WebUI\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\lewis.baxter\source\repos\api\Clean Architecture - Basic Example\WebUI
+build_property.MSBuildProjectDirectory = C:\Users\lewis\Documents\GitHub\clean-architecture-blazor-server-example\WebUI
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/lewis.baxter/source/repos/api/Clean Architecture - Basic Example/WebUI/App.razor]
+[C:/Users/lewis/Documents/GitHub/clean-architecture-blazor-server-example/WebUI/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lewis.baxter/source/repos/api/Clean Architecture - Basic Example/WebUI/Pages/FooExample.razor]
+[C:/Users/lewis/Documents/GitHub/clean-architecture-blazor-server-example/WebUI/Pages/FooExample.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9vRXhhbXBsZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lewis.baxter/source/repos/api/Clean Architecture - Basic Example/WebUI/Pages/Index.razor]
+[C:/Users/lewis/Documents/GitHub/clean-architecture-blazor-server-example/WebUI/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lewis.baxter/source/repos/api/Clean Architecture - Basic Example/WebUI/Shared/LoginDisplay.razor]
+[C:/Users/lewis/Documents/GitHub/clean-architecture-blazor-server-example/WebUI/Shared/LoginDisplay.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luRGlzcGxheS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lewis.baxter/source/repos/api/Clean Architecture - Basic Example/WebUI/_Imports.razor]
+[C:/Users/lewis/Documents/GitHub/clean-architecture-blazor-server-example/WebUI/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lewis.baxter/source/repos/api/Clean Architecture - Basic Example/WebUI/Shared/MainLayout.razor]
+[C:/Users/lewis/Documents/GitHub/clean-architecture-blazor-server-example/WebUI/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-mo84rfmz43
 
-[C:/Users/lewis.baxter/source/repos/api/Clean Architecture - Basic Example/WebUI/Shared/NavMenu.razor]
+[C:/Users/lewis/Documents/GitHub/clean-architecture-blazor-server-example/WebUI/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-aj272qsncx
 
-[C:/Users/lewis.baxter/source/repos/api/Clean Architecture - Basic Example/WebUI/Areas/Identity/Pages/Account/LogOut.cshtml]
+[C:/Users/lewis/Documents/GitHub/clean-architecture-blazor-server-example/WebUI/Areas/Identity/Pages/Account/LogOut.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dPdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lewis.baxter/source/repos/api/Clean Architecture - Basic Example/WebUI/Areas/Identity/Pages/Shared/_LoginPartial.cshtml]
+[C:/Users/lewis/Documents/GitHub/clean-architecture-blazor-server-example/WebUI/Areas/Identity/Pages/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lewis.baxter/source/repos/api/Clean Architecture - Basic Example/WebUI/Pages/Error.cshtml]
+[C:/Users/lewis/Documents/GitHub/clean-architecture-blazor-server-example/WebUI/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lewis.baxter/source/repos/api/Clean Architecture - Basic Example/WebUI/Pages/_Host.cshtml]
+[C:/Users/lewis/Documents/GitHub/clean-architecture-blazor-server-example/WebUI/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
