@@ -1,47 +1,145 @@
 ﻿using Domain.Entities.Foo;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using Persistence.Contexts;
 
 namespace Persistence.Repositories;
 
 public class FooRepository : IFooRepository
 {
-    private static readonly List<FooEntity> _Foos = new();
+    private readonly ApplicationDbContext _context;
+    private readonly ILogger<FooRepository> _logger;
 
-    public List<FooEntity> GetFoos(CancellationToken cancellationToken)
+    public FooRepository(ApplicationDbContext context, ILogger<FooRepository> logger)
     {
-        return _Foos;
+        _context = context;
+        _logger = logger;
     }
 
-    public FooEntity GetFooById(int id, CancellationToken cancellationToken)
+    public async Task<IList<FooEntity>> GetFoos(CancellationToken cancellationToken)
     {
-        var foo = _Foos.FirstOrDefault(t => t.Id == id);
-
-        if (foo is not null)
-            return foo;
-        else
-            throw new NullReferenceException($"Could not find data for Foo with id: {id}");
-    }
-
-    public void AddFoo(FooEntity Foo, CancellationToken cancellationToken)
-    {
-        _Foos.Add(Foo);
-    }
-
-    public void UpdateFoo(FooEntity Foo, CancellationToken cancellationToken)
-    {
-        var existingFoo = _Foos.FirstOrDefault(t => t.Id == Foo.Id);
-        if (existingFoo != null)
+        try
         {
-            existingFoo.Title = Foo.Title;
-            existingFoo.IsCompleted = Foo.IsCompleted;
+            _logger.LogInformation($"Attempting to get all foos");
+
+            return await _context.Foo
+                .Select(x => new FooEntity
+                {
+                    Id = x.Id,
+                    Title = x.Title,
+                    IsCompleted = x.IsCompleted,
+                    CreatedAt = x.CreatedAt
+                }).ToListAsync(cancellationToken);
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, $"Failed to get all foos");
+            throw;
+        }
+    }
+
+    public async Task<IList<FooEntity>> GetFooById(int id, CancellationToken cancellationToken)
+    {
+        try
+        {
+            _logger.LogInformation($"Attempting to get all foos");
+
+            return await _context.Foo
+                .Where(x => x.Id == id)
+                .Select(x => new FooEntity
+                {
+                    Id = x.Id,
+                    Title = x.Title,
+                    IsCompleted = x.IsCompleted,
+                    CreatedAt = x.CreatedAt,
+                    UpdatedAt = x.UpdatedAt
+                }).ToListAsync(cancellationToken);
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, $"Failed to get all foos");
+            throw;
+        }
+    }
+
+    public async void AddFoo(FooEntity foo, CancellationToken cancellationToken)
+    {
+        try
+        {
+            _logger.LogInformation($"Attempting to create new foo: {foo}");
+
+            // You may or may not need this check, use as needed
+            var exists = _context.Foo.FirstOrDefault(x => x.Id == foo.Id);
+
+            // Same for this check, use as needed
+            if (exists is not null)
+                throw new Exception($"Could not create new foo: {foo}, as this already exists");
+
+            var entity = await _context.Foo.AddAsync(new FooEntity
+            {
+                Title = foo.Title,
+                IsCompleted = foo.IsCompleted
+            });
+
+            var changes = await _context.SaveChangesAsync(cancellationToken);
+
+            if (changes <= 0)
+                throw new Exception($"Failed to create new foo: {foo}, while saving changes");
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, $"Failed to create new foo: {foo}");
+        }
+    }
+
+    public async void UpdateFoo(FooEntity foo, CancellationToken cancellationToken)
+    {
+        try
+        {
+            _logger.LogInformation($"Attempting to update foo with id: {foo.Id}");
+
+            var fooObject = _context.Foo
+                .AsTracking()
+                .FirstOrDefault(x => x.Id == foo.Id);
+
+            if (fooObject is null)
+                throw new Exception($"Could not find foo with id: {foo.Id}");
+
+            foo.Title = fooObject.Title;
+            foo.IsCompleted = fooObject.IsCompleted;
+            foo.UpdatedAt = fooObject.UpdatedAt;
+
+            var changes = await _context.SaveChangesAsync(cancellationToken);
+
+            if(changes <= 0)
+                throw new Exception($"Failed to save changes whilst updating foo: {foo}");
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, $"Failed to update foo with id: {foo.Id}");
+            throw;
         }
     }
 
     public void DeleteFoo(int id, CancellationToken cancellationToken)
     {
-        var FooToRemove = _Foos.FirstOrDefault(t => t.Id == id);
-        if (FooToRemove != null)
+        try
         {
-            _Foos.Remove(FooToRemove);
+            _logger.LogInformation($"Attempting to delete foo by id: {id}");
+
+            var fooExists = _context.Foo.FirstOrDefault(x => x.Id == id);
+
+            if (fooExists is null)
+                throw new Exception($"Could not find foo with id: {id}");
+
+            _context.Foo
+                .Where(x => x.Id == id)
+                .ExecuteDelete();
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, $"Failed to delete foo with id: {id}");
+            throw;
         }
     }
 }

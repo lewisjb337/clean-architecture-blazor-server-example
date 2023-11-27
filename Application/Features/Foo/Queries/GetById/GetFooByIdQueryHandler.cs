@@ -1,4 +1,5 @@
-﻿using Persistence.Repositories;
+﻿using Domain.Entities.Foo;
+using Persistence.Repositories;
 
 namespace Application.Features.Foo.Queries.GetById;
 
@@ -11,9 +12,8 @@ public class GetFooByIdQueryHandler
         _fooRepository = fooRepository;
     }
 
-    public GetFooByIdQueryResult Handle(GetFooByIdQuery query)
+    public async Task<IList<FooEntity>> Handle(int id)
     {
-        var task = _fooRepository.GetFooById(query.FooId);
-        return new GetFooByIdQueryResult { Foo = task };
+        return await _fooRepository.GetFooById(id);
     }
 }

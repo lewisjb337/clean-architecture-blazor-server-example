@@ -10,16 +10,16 @@ public partial class FooExample
     [Inject]
     public required IFooService FooService { get; set; }
 
-    private List<FooDTO> foos = new();
+    private IList<FooDTO>? foos { get; set; }
     private FooEntity? selectedFoo;
 
     protected override void OnInitialized()
     {
-        foos = FooService.GetFooQuery();
+        LoadData();
     }
 
-    private void GetFooDetails(int fooId)
+    public async void LoadData()
     {
-        selectedFoo = FooService.GetFooByIdQuery(fooId);
+        foos = await FooService.GetFooQuery();
     }
 }

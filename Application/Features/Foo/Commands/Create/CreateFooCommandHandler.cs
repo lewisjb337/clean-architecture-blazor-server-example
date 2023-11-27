@@ -14,7 +14,7 @@ public class CreateFooCommandHandler
 
     public void Handle(CreateFooCommand command)
     {
-        var newFoo = new FooEntity { Title = command.Title, IsCompleted = false };
+        var newFoo = new FooEntity { Title = command.Title, IsCompleted = false, CreatedAt = DateTimeOffset.Now };
         _fooRepository.AddFoo(newFoo);
     }
 }

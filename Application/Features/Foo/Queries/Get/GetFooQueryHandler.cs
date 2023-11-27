@@ -1,4 +1,4 @@
-﻿using Application.Features.Tasks.Queries;
+﻿using Domain.Entities.Foo;
 using Persistence.Repositories;
 
 namespace Application.Features.Foo.Queries.Get;
@@ -12,9 +12,8 @@ public class GetFooQueryHandler
         _fooRepository = fooRepository;
     }
 
-    public GetFoosQueryResult Handle()
+    public async Task<IList<FooEntity>> Handle()
     {
-        var foos = _fooRepository.GetFoos();
-        return new GetFoosQueryResult { Foos = foos };
+        return await _fooRepository.GetFoos();
     }
 }

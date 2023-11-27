@@ -4,8 +4,6 @@ using Application.Features.Foo.Commands.Delete;
 using Application.Features.Foo.Commands.Update;
 using Application.Features.Foo.Queries.Get;
 using Application.Features.Foo.Queries.GetById;
-using Domain.Entities.Foo;
-using Persistence.Repositories;
 
 namespace Application.Services;
 
@@ -31,10 +29,11 @@ public class FooService : IFooService
         _getFooByIdQueryHandler = getFooByIdQueryHandler;
     }
 
-    public List<FooDTO> GetFooQuery(CancellationToken cancellationToken)
+    public async Task<IList<FooDTO>> GetFooQuery(CancellationToken cancellationToken)
     {
-        var result = _getFooQueryHandler.Handle();
-        return result.Foos.Select(x => new FooDTO
+        var foo = await _getFooQueryHandler.Handle();
+
+        return foo.Select(x => new FooDTO
         {
             Id = x.Id,
             Title = x.Title,
@@ -42,11 +41,16 @@ public class FooService : IFooService
         }).ToList();
     }
 
-    public FooEntity GetFooByIdQuery(int id, CancellationToken cancellationToken)
+    public async Task<IList<FooDTO>> GetFooByIdQuery(int id, CancellationToken cancellationToken)
     {
-        var query = new GetFooByIdQuery { FooId = id };
-        var result = _getFooByIdQueryHandler.Handle(query);
-        return result.Foo;
+        var foo = await _getFooByIdQueryHandler.Handle(id);
+
+        return foo.Select(x => new FooDTO
+        {
+            Id = x.Id,
+            Title = x.Title,
+            IsCompleted = x.IsCompleted
+        }).ToList();
     }
 
     public void AddFoo(CreateFooCommand command, CancellationToken cancellationToken)
