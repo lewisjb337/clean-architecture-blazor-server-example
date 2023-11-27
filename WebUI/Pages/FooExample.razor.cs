@@ -1,4 +1,5 @@
 ﻿using Application.DTOs;
+using Application.Features.Foo.Commands.Create;
 using Application.Services;
 using Microsoft.AspNetCore.Components;
 
@@ -19,5 +20,17 @@ public partial class FooExample
     public async void LoadData()
     {
         foos = await FooService.GetFooQuery();
+
+        StateHasChanged();
+    }
+
+    public async void AddData()
+    {
+        FooService.AddFoo(new CreateFooCommand
+        {
+            Title = "Foo",
+        });
+
+        StateHasChanged();
     }
 }
