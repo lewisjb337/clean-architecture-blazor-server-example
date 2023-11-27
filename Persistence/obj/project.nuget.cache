@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "M0YKXgICJUJGl8GhZaKA6vot/5KVp1es/NGyOsRxumzvU5EJe53FeJJpj0tb02hS3mjZ0WkTnJ1DQvSwYBjY1g==",
+  "dgSpecHash": "vngkZt884DBkpBfhHjPsmT03WUKOW4vD9tkGuCJ/KJWTqgHMqiHn8zmzNQCUjzB2bGaRYhS0nuifxxfc5RI7gg==",
   "success": true,
   "projectFilePath": "C:\\Users\\lewis.baxter\\source\\repos\\api\\Clean Architecture - Basic Example\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [

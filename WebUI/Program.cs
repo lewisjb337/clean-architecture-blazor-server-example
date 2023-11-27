@@ -7,6 +7,7 @@ using Persistence.Contexts;
 using UserAdmin.Database.Models;
 using WebUI.Areas.Identity;
 using Persistence.Models;
+using WebUI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration
@@ -26,6 +27,7 @@ builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuth
 
 builder.Services.RegisterPersistenceServices(config.GetSection("ConnectionStrings").Get<DatabaseOptions>());
 builder.Services.RegisterApplicationServices();
+builder.Services.AddScoped<UserContext>();
 
 var app = builder.Build();
 

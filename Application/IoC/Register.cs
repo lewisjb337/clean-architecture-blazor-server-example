@@ -17,6 +17,7 @@ public static class Register
         services.AddScoped<DeleteFooCommandHandler>();
         services.AddScoped<GetFooQueryHandler>();
         services.AddScoped<GetFooByIdQueryHandler>();
+        services.AddScoped<GetFooByUserIdQueryHandler>();
 
         services.AddScoped<IFooService, FooService>();
     }

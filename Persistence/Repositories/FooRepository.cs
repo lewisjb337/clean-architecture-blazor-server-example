@@ -62,6 +62,30 @@ public class FooRepository : IFooRepository
         }
     }
 
+    public async Task<IList<FooEntity>> GetFooByUserId(string id, CancellationToken cancellationToken)
+    {
+        try
+        {
+            _logger.LogInformation($"Attempting to get foos for user with id: {id}");
+
+            return await _context.Foo
+                .Where(x => x.UserId.Equals(id))
+                .Select(x => new FooEntity
+                {
+                    Id = x.Id,
+                    Title = x.Title,
+                    IsCompleted = x.IsCompleted,
+                    CreatedAt = x.CreatedAt,
+                    UpdatedAt = x.UpdatedAt
+                }).ToListAsync(cancellationToken);
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, $"Failed to get foos for user with id: {id}");
+            throw;
+        }
+    }
+
     public async void AddFoo(FooEntity foo, CancellationToken cancellationToken)
     {
         try
@@ -77,6 +101,7 @@ public class FooRepository : IFooRepository
 
             var entity = await _context.Foo.AddAsync(new FooEntity
             {
+                UserId = foo.UserId,
                 Title = foo.Title,
                 IsCompleted = foo.IsCompleted
             });

@@ -14,19 +14,22 @@ public class FooService : IFooService
     private readonly DeleteFooCommandHandler _deleteFooCommandHandler;
     private readonly GetFooQueryHandler _getFooQueryHandler;
     private readonly GetFooByIdQueryHandler _getFooByIdQueryHandler;
+    private readonly GetFooByUserIdQueryHandler _getFooByUserIdQueryHandler;
 
     public FooService(
         CreateFooCommandHandler createFooCommandHandler,
         UpdateFooCommandHandler updateFooCommandHandler,
         DeleteFooCommandHandler deleteFooCommandHandler,
         GetFooQueryHandler getFooQueryHandler,
-        GetFooByIdQueryHandler getFooByIdQueryHandler)
+        GetFooByIdQueryHandler getFooByIdQueryHandler,
+        GetFooByUserIdQueryHandler getFooByUserIdQueryHandler)
     {
         _createFooCommandHandler = createFooCommandHandler;
         _updateFooCommandHandler = updateFooCommandHandler;
         _deleteFooCommandHandler = deleteFooCommandHandler;
         _getFooQueryHandler = getFooQueryHandler;
         _getFooByIdQueryHandler = getFooByIdQueryHandler;
+        _getFooByUserIdQueryHandler = getFooByUserIdQueryHandler;
     }
 
     public async Task<IList<FooDTO>> GetFooQuery(CancellationToken cancellationToken)
@@ -44,6 +47,18 @@ public class FooService : IFooService
     public async Task<IList<FooDTO>> GetFooByIdQuery(int id, CancellationToken cancellationToken)
     {
         var foo = await _getFooByIdQueryHandler.Handle(id);
+
+        return foo.Select(x => new FooDTO
+        {
+            Id = x.Id,
+            Title = x.Title,
+            IsCompleted = x.IsCompleted
+        }).ToList();
+    }
+
+    public async Task<IList<FooDTO>> GetFooByUserIdQuery(string id, CancellationToken cancellationToken)
+    {
+        var foo = await _getFooByUserIdQueryHandler.Handle(id);
 
         return foo.Select(x => new FooDTO
         {
