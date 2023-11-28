@@ -5,7 +5,7 @@ using Application.Features.Foo.Commands.Update;
 using Application.Features.Foo.Queries.Get;
 using Application.Features.Foo.Queries.GetById;
 
-namespace Application.Services;
+namespace Application.Services.Foo;
 
 public class FooService : IFooService
 {

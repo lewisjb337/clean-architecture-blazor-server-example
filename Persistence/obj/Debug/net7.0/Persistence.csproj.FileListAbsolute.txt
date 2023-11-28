@@ -13,3 +13,18 @@ C:\Users\lewis.baxter\source\repos\api\Clean Architecture - Basic Example\Persis
 C:\Users\lewis.baxter\source\repos\api\Clean Architecture - Basic Example\Persistence\obj\Debug\net7.0\refint\Persistence.dll
 C:\Users\lewis.baxter\source\repos\api\Clean Architecture - Basic Example\Persistence\obj\Debug\net7.0\Persistence.pdb
 C:\Users\lewis.baxter\source\repos\api\Clean Architecture - Basic Example\Persistence\obj\Debug\net7.0\ref\Persistence.dll
+\\ast\user$\lewis.baxter\My Documents\GitHub\clean-architecture-blazor-server-example\Persistence\bin\Debug\net7.0\Persistence.deps.json
+\\ast\user$\lewis.baxter\My Documents\GitHub\clean-architecture-blazor-server-example\Persistence\bin\Debug\net7.0\Persistence.dll
+\\ast\user$\lewis.baxter\My Documents\GitHub\clean-architecture-blazor-server-example\Persistence\bin\Debug\net7.0\Persistence.pdb
+\\ast\user$\lewis.baxter\My Documents\GitHub\clean-architecture-blazor-server-example\Persistence\bin\Debug\net7.0\Domain.dll
+\\ast\user$\lewis.baxter\My Documents\GitHub\clean-architecture-blazor-server-example\Persistence\bin\Debug\net7.0\Domain.pdb
+\\ast\user$\lewis.baxter\My Documents\GitHub\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\Persistence.csproj.AssemblyReference.cache
+\\ast\user$\lewis.baxter\My Documents\GitHub\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+\\ast\user$\lewis.baxter\My Documents\GitHub\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\Persistence.AssemblyInfoInputs.cache
+\\ast\user$\lewis.baxter\My Documents\GitHub\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\Persistence.AssemblyInfo.cs
+\\ast\user$\lewis.baxter\My Documents\GitHub\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\Persistence.csproj.CoreCompileInputs.cache
+\\ast\user$\lewis.baxter\My Documents\GitHub\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\Persistence.csproj.CopyComplete
+\\ast\user$\lewis.baxter\My Documents\GitHub\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\Persistence.dll
+\\ast\user$\lewis.baxter\My Documents\GitHub\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\refint\Persistence.dll
+\\ast\user$\lewis.baxter\My Documents\GitHub\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\Persistence.pdb
+\\ast\user$\lewis.baxter\My Documents\GitHub\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\ref\Persistence.dll

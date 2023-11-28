@@ -3,7 +3,7 @@ using Application.Features.Foo.Commands.Delete;
 using Application.Features.Foo.Commands.Update;
 using Application.Features.Foo.Queries.Get;
 using Application.Features.Foo.Queries.GetById;
-using Application.Services;
+using Application.Services.Foo;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Application.IoC;

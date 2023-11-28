@@ -6,10 +6,10 @@
 
 <button class="btn btn-primary" @onclick="AddData">Add Dummy Data</button>
 
-@if (userFoos is not null)
+@if (UserFoos is not null)
 {
     <ul>
-        @foreach (var foo in userFoos)
+        @foreach (var foo in UserFoos)
         {
             <li>
                 <strong>@foo.Title</strong>
@@ -25,10 +25,10 @@ else
 <br />
 <h3>Foo List</h3>
 
-@if (foos is not null)
+@if (Foos is not null)
 {
     <ul>
-        @foreach (var foo in foos)
+        @foreach (var foo in Foos)
         {
             <li>
                 <strong>@foo.Title</strong>

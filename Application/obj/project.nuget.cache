@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c+PTHv5dEpVNI7fQlyzyeuC+kUAhT/ssQtCL9tylWzoSOKMmBUkif5WfEfhxw/fAr8HhIa/DV1AN1LUHjnuF5Q==",
+  "dgSpecHash": "6WrEYAxmiS55Q1vZPnDLuRN7/WewFOx95G5q29FctI5bFYv/684NFBtCbDe0gamHg8eZ2/azHkuhfe2f9+tmCA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lewis.baxter\\source\\repos\\api\\Clean Architecture - Basic Example\\Application\\Application.csproj",
+  "projectFilePath": "\\\\ast\\user$\\lewis.baxter\\My Documents\\GitHub\\clean-architecture-blazor-server-example\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lewis.baxter\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\lewis.baxter\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

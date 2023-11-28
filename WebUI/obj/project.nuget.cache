@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v0jLaNOcziW+5VvK7XG74Qd6LmixYzn8yLmVetOej4ZMXFrIMYFc8k2AUl+TDZfKPjWh3ZJuCxHdpVsyhrlK8w==",
+  "dgSpecHash": "Sa8amQiayERKqwY6ZxlPPj/hzTakjcLQesg76jA7dAYbQ+R0Gxvu3tWefVBQbka9rbJ2IappTQmO1+MzBH48dA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lewis.baxter\\source\\repos\\api\\Clean Architecture - Basic Example\\WebUI\\WebUI.csproj",
+  "projectFilePath": "\\\\ast\\user$\\lewis.baxter\\My Documents\\GitHub\\clean-architecture-blazor-server-example\\WebUI\\WebUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lewis.baxter\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\lewis.baxter\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

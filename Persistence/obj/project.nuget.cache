@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vngkZt884DBkpBfhHjPsmT03WUKOW4vD9tkGuCJ/KJWTqgHMqiHn8zmzNQCUjzB2bGaRYhS0nuifxxfc5RI7gg==",
+  "dgSpecHash": "qqqtubPsNL552dWZ1Otdbl8AhrmV+3GlKnk+FFerlbZtIt4bVrhnMyYwUTb3Jeu/xhIw5ySxdMoRczp2S2XaVg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lewis.baxter\\source\\repos\\api\\Clean Architecture - Basic Example\\Persistence\\Persistence.csproj",
+  "projectFilePath": "\\\\ast\\user$\\lewis.baxter\\My Documents\\GitHub\\clean-architecture-blazor-server-example\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lewis.baxter\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\lewis.baxter\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

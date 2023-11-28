@@ -3,7 +3,7 @@ using Application.Features.Foo.Commands.Create;
 using Application.Features.Foo.Commands.Delete;
 using Application.Features.Foo.Commands.Update;
 
-namespace Application.Services;
+namespace Application.Services.Foo;
 
 public interface IFooService
 {

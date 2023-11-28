@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Domain
-build_property.ProjectDir = C:\Users\lewis.baxter\source\repos\api\Clean Architecture - Basic Example\Domain\
+build_property.ProjectDir = \\ast\user$\lewis.baxter\My Documents\GitHub\clean-architecture-blazor-server-example\Domain\
