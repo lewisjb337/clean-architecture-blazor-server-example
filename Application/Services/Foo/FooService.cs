@@ -34,7 +34,7 @@ public class FooService : IFooService
 
     public async Task<IList<FooDTO>> GetFooQueryAsync(CancellationToken cancellationToken)
     {
-        var foo = await _getFooQueryHandler.Handle();
+        var foo = await _getFooQueryHandler.HandleAsync();
 
         return foo.Select(x => new FooDTO
         {
@@ -46,7 +46,7 @@ public class FooService : IFooService
 
     public async Task<IList<FooDTO>> GetFooByIdQueryAsync(int id, CancellationToken cancellationToken)
     {
-        var foo = await _getFooByIdQueryHandler.Handle(id);
+        var foo = await _getFooByIdQueryHandler.HandleAsync(id);
 
         return foo.Select(x => new FooDTO
         {
@@ -58,7 +58,7 @@ public class FooService : IFooService
 
     public async Task<IList<FooDTO>> GetFooByUserIdQueryAsync(string id, CancellationToken cancellationToken)
     {
-        var foo = await _getFooByUserIdQueryHandler.Handle(id);
+        var foo = await _getFooByUserIdQueryHandler.HandleAsync(id);
 
         return foo.Select(x => new FooDTO
         {
@@ -70,12 +70,12 @@ public class FooService : IFooService
 
     public async Task AddFooAsync(CreateFooCommand command, CancellationToken cancellationToken)
     {
-        await _createFooCommandHandler.Handle(command);
+        await _createFooCommandHandler.HandleAsync(command);
     }
 
     public async Task UpdateFooAsync(UpdateFooCommand command, CancellationToken cancellationToken)
     {
-        await _updateFooCommandHandler.Handle(command);
+        await _updateFooCommandHandler.HandleAsync(command);
     }
 
     public void DeleteFooAsync(DeleteFooCommand command, CancellationToken cancellationToken)

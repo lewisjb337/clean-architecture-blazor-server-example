@@ -12,7 +12,7 @@ public class GetFooQueryHandler
         _fooRepository = fooRepository;
     }
 
-    public async Task<IList<FooEntity>> Handle()
+    public async Task<IList<FooEntity>> HandleAsync()
     {
         return await _fooRepository.GetFoosAsync();
     }

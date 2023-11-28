@@ -12,7 +12,7 @@ public class GetFooByUserIdQueryHandler
         _fooRepository = fooRepository;
     }
 
-    public async Task<IList<FooEntity>> Handle(string id)
+    public async Task<IList<FooEntity>> HandleAsync(string id)
     {
         return await _fooRepository.GetFooByUserIdAsync(id);
     }

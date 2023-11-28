@@ -12,7 +12,7 @@ public class CreateFooCommandHandler
         _fooRepository = fooRepository;
     }
 
-    public async Task Handle(CreateFooCommand command)
+    public async Task HandleAsync(CreateFooCommand command)
     {
         var newFoo = new FooEntity { UserId = command.UserId, Title = command.Title, IsCompleted = false, CreatedAt = DateTimeOffset.Now };
         await _fooRepository.AddFooAsync(newFoo);

@@ -11,7 +11,7 @@ public class UpdateFooCommandHandler
         _fooRepository = fooRepository;
     }
 
-    public async Task Handle(UpdateFooCommand command)
+    public async Task HandleAsync(UpdateFooCommand command)
     {
         var existingFoo = await _fooRepository.GetFooByIdAsync(command.Id);
 
