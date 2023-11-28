@@ -4,6 +4,7 @@ using Application.Features.Foo.Commands.Delete;
 using Application.Features.Foo.Commands.Update;
 using Application.Features.Foo.Queries.Get;
 using Application.Features.Foo.Queries.GetById;
+using WebUI.Data.Migrations;
 
 namespace Application.Services.Foo;
 
