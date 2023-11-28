@@ -23,7 +23,7 @@ builder.Services.AddDefaultIdentity<UserProfile>(options => options.SignIn.Requi
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
+builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<UserProfile>>();
 
 builder.Services.RegisterPersistenceServices(config.GetSection("ConnectionStrings").Get<DatabaseOptions>());
 builder.Services.RegisterApplicationServices();
