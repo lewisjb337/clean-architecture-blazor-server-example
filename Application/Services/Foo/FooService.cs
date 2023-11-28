@@ -32,7 +32,7 @@ public class FooService : IFooService
         _getFooByUserIdQueryHandler = getFooByUserIdQueryHandler;
     }
 
-    public async Task<IList<FooDTO>> GetFooQuery(CancellationToken cancellationToken)
+    public async Task<IList<FooDTO>> GetFooQueryAsync(CancellationToken cancellationToken)
     {
         var foo = await _getFooQueryHandler.Handle();
 
@@ -44,7 +44,7 @@ public class FooService : IFooService
         }).ToList();
     }
 
-    public async Task<IList<FooDTO>> GetFooByIdQuery(int id, CancellationToken cancellationToken)
+    public async Task<IList<FooDTO>> GetFooByIdQueryAsync(int id, CancellationToken cancellationToken)
     {
         var foo = await _getFooByIdQueryHandler.Handle(id);
 
@@ -56,7 +56,7 @@ public class FooService : IFooService
         }).ToList();
     }
 
-    public async Task<IList<FooDTO>> GetFooByUserIdQuery(string id, CancellationToken cancellationToken)
+    public async Task<IList<FooDTO>> GetFooByUserIdQueryAsync(string id, CancellationToken cancellationToken)
     {
         var foo = await _getFooByUserIdQueryHandler.Handle(id);
 
@@ -68,17 +68,17 @@ public class FooService : IFooService
         }).ToList();
     }
 
-    public void AddFoo(CreateFooCommand command, CancellationToken cancellationToken)
+    public async Task AddFooAsync(CreateFooCommand command, CancellationToken cancellationToken)
     {
-        _createFooCommandHandler.Handle(command);
+        await _createFooCommandHandler.Handle(command);
     }
 
-    public void UpdateFoo(UpdateFooCommand command, CancellationToken cancellationToken)
+    public async Task UpdateFooAsync(UpdateFooCommand command, CancellationToken cancellationToken)
     {
-        _updateFooCommandHandler.Handle(command);
+        await _updateFooCommandHandler.Handle(command);
     }
 
-    public void DeleteFoo(DeleteFooCommand command, CancellationToken cancellationToken)
+    public void DeleteFooAsync(DeleteFooCommand command, CancellationToken cancellationToken)
     {
         _deleteFooCommandHandler.Handle(command);
     }

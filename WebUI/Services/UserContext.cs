@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Components.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Persistence.Models;
 
@@ -6,8 +7,8 @@ namespace WebUI.Services;
 
 public class UserContext
 {
-    private AuthenticationStateProvider _authenticationStateProvider { get; set; }
-    private UserManager<UserProfile> _userManager { get; set; }
+    public AuthenticationStateProvider _authenticationStateProvider { get; set; }
+    public UserManager<UserProfile> _userManager { get; set; }
 
     public UserContext(AuthenticationStateProvider authenticationStateProvider, UserManager<UserProfile> userManager)
     {

@@ -16,7 +16,7 @@ public class FooRepository : IFooRepository
         _logger = logger;
     }
 
-    public async Task<IList<FooEntity>> GetFoos(CancellationToken cancellationToken)
+    public async Task<IList<FooEntity>> GetFoosAsync(CancellationToken cancellationToken)
     {
         try
         {
@@ -38,7 +38,7 @@ public class FooRepository : IFooRepository
         }
     }
 
-    public async Task<IList<FooEntity>> GetFooById(int id, CancellationToken cancellationToken)
+    public async Task<IList<FooEntity>> GetFooByIdAsync(int id, CancellationToken cancellationToken)
     {
         try
         {
@@ -62,7 +62,7 @@ public class FooRepository : IFooRepository
         }
     }
 
-    public async Task<IList<FooEntity>> GetFooByUserId(string id, CancellationToken cancellationToken)
+    public async Task<IList<FooEntity>> GetFooByUserIdAsync(string id, CancellationToken cancellationToken)
     {
         try
         {
@@ -86,7 +86,7 @@ public class FooRepository : IFooRepository
         }
     }
 
-    public async void AddFoo(FooEntity foo, CancellationToken cancellationToken)
+    public async Task AddFooAsync(FooEntity foo, CancellationToken cancellationToken)
     {
         try
         {
@@ -117,7 +117,7 @@ public class FooRepository : IFooRepository
         }
     }
 
-    public async void UpdateFoo(FooEntity foo, CancellationToken cancellationToken)
+    public async Task UpdateFooAsync(FooEntity foo, CancellationToken cancellationToken)
     {
         try
         {
@@ -146,7 +146,7 @@ public class FooRepository : IFooRepository
         }
     }
 
-    public void DeleteFoo(int id, CancellationToken cancellationToken)
+    public void DeleteFooAsync(int id, CancellationToken cancellationToken)
     {
         try
         {

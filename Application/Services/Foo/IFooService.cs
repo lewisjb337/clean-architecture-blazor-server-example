@@ -7,10 +7,10 @@ namespace Application.Services.Foo;
 
 public interface IFooService
 {
-    Task<IList<FooDTO>> GetFooQuery(CancellationToken cancellationToken = default);
-    Task<IList<FooDTO>> GetFooByIdQuery(int id, CancellationToken cancellationToken = default);
-    Task<IList<FooDTO>> GetFooByUserIdQuery(string id, CancellationToken cancellationToken = default);
-    void AddFoo(CreateFooCommand command, CancellationToken cancellationToken = default);
-    void UpdateFoo(UpdateFooCommand command, CancellationToken cancellationToken = default);
-    void DeleteFoo(DeleteFooCommand command, CancellationToken cancellationToken = default);
+    Task<IList<FooDTO>> GetFooQueryAsync(CancellationToken cancellationToken = default);
+    Task<IList<FooDTO>> GetFooByIdQueryAsync(int id, CancellationToken cancellationToken = default);
+    Task<IList<FooDTO>> GetFooByUserIdQueryAsync(string id, CancellationToken cancellationToken = default);
+    Task AddFooAsync(CreateFooCommand command, CancellationToken cancellationToken = default);
+    Task UpdateFooAsync(UpdateFooCommand command, CancellationToken cancellationToken = default);
+    void DeleteFooAsync(DeleteFooCommand command, CancellationToken cancellationToken = default);
 }

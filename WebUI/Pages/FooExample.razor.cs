@@ -1,22 +1,24 @@
 ﻿using Application.DTOs;
 using Application.Features.Foo.Commands.Create;
 using Application.Services.Foo;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using WebUI.Services;
 
 namespace WebUI.Pages;
 
+[Authorize]
 public partial class FooExample
 {
     [Inject]
     public required IFooService FooService { get; set; }
 
     [Inject]
-    public UserContext UserContext { get; set; }
+    public UserContext? UserContext { get; set; }
 
     private IList<FooDTO>? UserFoos { get; set; }
     private IList<FooDTO>? Foos { get; set; }
-    readonly string UserId = string.Empty;
+    string UserId = string.Empty;
 
     protected override async void OnInitialized()
     {
@@ -25,23 +27,30 @@ public partial class FooExample
 
     public async Task LoadData()
     {
-        var user_id = await UserContext.UserId();
+        var user_id = string.Empty;
 
-        UserFoos = await FooService.GetFooByUserIdQuery(user_id);
+        if(UserContext is not null)
+            user_id = await UserContext.UserId();
 
-        Foos = await FooService.GetFooQuery();
+        if(user_id is not null)
+            UserId = user_id;
+
+        if (user_id is not null)
+            UserFoos = await FooService.GetFooByUserIdQueryAsync(user_id);
+
+        Foos = await FooService.GetFooQueryAsync();
 
         StateHasChanged();
     }
 
-    public void AddData()
+    public async Task AddData()
     {
-        FooService.AddFoo(new CreateFooCommand
+        await FooService.AddFooAsync(new CreateFooCommand
         {
             UserId = UserId,
             Title = "Foo",
         });
 
-        StateHasChanged();
+        await LoadData();
     }
 }

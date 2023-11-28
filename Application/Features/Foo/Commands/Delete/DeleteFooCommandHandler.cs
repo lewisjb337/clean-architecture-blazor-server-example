@@ -13,6 +13,6 @@ public class DeleteFooCommandHandler
 
     public void Handle(DeleteFooCommand command)
     {
-        _fooRepository.DeleteFoo(command.Id);
+        _fooRepository.DeleteFooAsync(command.Id);
     }
 }

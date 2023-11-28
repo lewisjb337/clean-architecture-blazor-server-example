@@ -2,5 +2,5 @@
 
 public class DatabaseOptions
 {
-    public string UserAdmin { get; set; }
+    public string UserAdmin { get; set; } = string.Empty;
 }

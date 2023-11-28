@@ -11,19 +11,22 @@ public class UpdateFooCommandHandler
         _fooRepository = fooRepository;
     }
 
-    public async void Handle(UpdateFooCommand command)
+    public async Task Handle(UpdateFooCommand command)
     {
-        var existingFoo = await _fooRepository.GetFooById(command.Id);
+        var existingFoo = await _fooRepository.GetFooByIdAsync(command.Id);
 
         if (existingFoo is not null)
         {
             var foo = existingFoo.FirstOrDefault();
 
-            foo.Title = command.Title;
-            foo.IsCompleted = command.IsCompleted;
-            foo.UpdatedAt = DateTimeOffset.Now;
+            if(foo is not null)
+            {
+                foo.Title = command.Title;
+                foo.IsCompleted = command.IsCompleted;
+                foo.UpdatedAt = DateTimeOffset.Now;
 
-            _fooRepository.UpdateFoo(foo);
+                await _fooRepository.UpdateFooAsync(foo);
+            }
         }
     }
 }

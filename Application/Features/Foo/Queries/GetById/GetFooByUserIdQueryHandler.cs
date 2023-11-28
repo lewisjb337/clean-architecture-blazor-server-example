@@ -14,6 +14,6 @@ public class GetFooByUserIdQueryHandler
 
     public async Task<IList<FooEntity>> Handle(string id)
     {
-        return await _fooRepository.GetFooByUserId(id);
+        return await _fooRepository.GetFooByUserIdAsync(id);
     }
 }

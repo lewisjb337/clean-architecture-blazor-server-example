@@ -4,10 +4,10 @@ namespace Persistence.Repositories;
 
 public interface IFooRepository
 {
-    Task<IList<FooEntity>> GetFoos(CancellationToken cancellationToken = default);
-    Task<IList<FooEntity>> GetFooById(int id, CancellationToken cancellationToken = default);
-    Task<IList<FooEntity>> GetFooByUserId(string id, CancellationToken cancellationToken = default);
-    void AddFoo(FooEntity foo, CancellationToken cancellationToken = default);
-    void UpdateFoo(FooEntity foo, CancellationToken cancellationToken = default);
-    void DeleteFoo(int id, CancellationToken cancellationToken = default);
+    Task<IList<FooEntity>> GetFoosAsync(CancellationToken cancellationToken = default);
+    Task<IList<FooEntity>> GetFooByIdAsync(int id, CancellationToken cancellationToken = default);
+    Task<IList<FooEntity>> GetFooByUserIdAsync(string id, CancellationToken cancellationToken = default);
+    Task AddFooAsync(FooEntity foo, CancellationToken cancellationToken = default);
+    Task UpdateFooAsync(FooEntity foo, CancellationToken cancellationToken = default);
+    void DeleteFooAsync(int id, CancellationToken cancellationToken = default);
 }
