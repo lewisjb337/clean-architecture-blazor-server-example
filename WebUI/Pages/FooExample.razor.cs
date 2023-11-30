@@ -1,8 +1,8 @@
 ﻿using Application.DTOs;
-using Application.Features.Foo.Commands.Create;
 using Application.Services.Foo;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
+using Models.Requests;
 using WebUI.Services;
 
 namespace WebUI.Pages;
@@ -45,7 +45,7 @@ public partial class FooExample
 
     public async Task AddData()
     {
-        await FooService.AddFooAsync(new CreateFooCommand
+        await FooService.AddFooAsync(new FooRequest
         {
             UserId = UserId,
             Title = "Foo",
