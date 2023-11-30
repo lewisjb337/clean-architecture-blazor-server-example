@@ -6,6 +6,7 @@ using Persistence.Features.Foo.Commands.Delete;
 using Persistence.Features.Foo.Commands.Update;
 using Persistence.Features.Foo.Queries.Get;
 using Persistence.Features.Foo.Queries.GetById;
+using Persistence.Services;
 using UserAdmin.Database.Models;
 
 namespace Persistence.IoC;
@@ -20,6 +21,8 @@ public static class Register
         services.AddScoped<GetFooHandler>();
         services.AddScoped<GetFooByIdHandler>();
         services.AddScoped<GetFooByUserIdHandler>();
+
+        services.AddScoped<UserContext>();
 
         services.AddDbContext<ApplicationDbContext>(x => x.UseSqlServer(options.UserAdmin));
     }

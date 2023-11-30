@@ -6,6 +6,7 @@ using Persistence.Features.Foo.Commands.Delete;
 using Persistence.Features.Foo.Commands.Update;
 using Persistence.Features.Foo.Queries.Get;
 using Persistence.Features.Foo.Queries.GetById;
+using Persistence.Services;
 
 namespace Application.Services.Foo;
 
@@ -18,6 +19,8 @@ public class FooService : IFooService
     private readonly GetFooByIdHandler _getFooByIdQueryHandler;
     private readonly GetFooByUserIdHandler _getFooByUserIdQueryHandler;
 
+    private readonly UserContext _userContext;
+
     private readonly ILogger<FooService> _logger;
 
     public FooService(
@@ -27,6 +30,7 @@ public class FooService : IFooService
         GetFooHandler getFooQueryHandler,
         GetFooByIdHandler getFooByIdQueryHandler,
         GetFooByUserIdHandler getFooByUserIdQueryHandler,
+        UserContext userContext,
         ILogger<FooService> logger)
     {
         _createFooCommandHandler = createFooCommandHandler;
@@ -35,6 +39,7 @@ public class FooService : IFooService
         _getFooQueryHandler = getFooQueryHandler;
         _getFooByIdQueryHandler = getFooByIdQueryHandler;
         _getFooByUserIdQueryHandler = getFooByUserIdQueryHandler;
+        _userContext = userContext;
         _logger = logger;
     }
 
@@ -44,17 +49,28 @@ public class FooService : IFooService
         {
             _logger.LogInformation($"Attempting to get all Foo");
 
-            var foo = await _getFooQueryHandler.HandleAsync(cancellationToken);
+            var foos = await _getFooQueryHandler.HandleAsync(cancellationToken);
 
-            if (foo is null)
+            if (foos is null)
                 throw new Exception($"Could not find any Foo");
 
-            return foo.Select(x => new FooDTO
+
+            List<FooDTO> fooList = new();
+
+            foreach (var foo in foos)
             {
-                Id = x.Id,
-                Title = x.Title,
-                IsCompleted = x.IsCompleted
-            }).ToList();
+                var username = _userContext.Username(foo.UserId).Result.ToString();
+
+                fooList.Add(new FooDTO
+                {
+                    Id = foo.Id,
+                    Username = username,
+                    Title = foo.Title,
+                    IsCompleted = foo.IsCompleted
+                });
+            }
+
+            return fooList;
         }
         catch (Exception e)
         {

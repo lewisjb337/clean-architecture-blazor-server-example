@@ -276,3 +276,8 @@ C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-ex
 C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\WebUI\obj\Debug\net7.0\WebUI.csproj.CopyComplete
 C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\WebUI\obj\Debug\net7.0\WebUI.genruntimeconfig.cache
 C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\WebUI\obj\Debug\net7.0\ref\WebUI.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\WebUI\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\WebUI\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\WebUI\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\WebUI\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\WebUI\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
