@@ -54,23 +54,13 @@ public class FooService : IFooService
             if (foos is null)
                 throw new Exception($"Could not find any Foo");
 
-
-            List<FooDTO> fooList = new();
-
-            foreach (var foo in foos)
+            return foos.Select(x => new FooDTO
             {
-                var username = foo.UserId != null ? _userContext.Username(foo.UserId).Result.ToString() : null;
-
-                fooList.Add(new FooDTO
-                {
-                    Id = foo.Id,
-                    Username = username,
-                    Title = foo.Title,
-                    IsCompleted = foo.IsCompleted
-                });
-            }
-
-            return fooList;
+                Id = x.Id,
+                Username = _userContext.Username(x.UserId).Result.ToString(),
+                Title = x.Title,
+                IsCompleted = x.IsCompleted
+            }).ToList();
         }
         catch (Exception e)
         {
