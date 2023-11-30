@@ -12,14 +12,14 @@ public class UpdateFooHandler
         _context = context;
     }
 
-    public async Task HandleAsync(FooRequest command, CancellationToken cancellationToken)
+    public async Task HandleAsync(FooRequest request, CancellationToken cancellationToken)
     {
-        var foo = _context.Foo.FirstOrDefault(x => x.Id.Equals(command.Id));
+        var foo = _context.Foo.FirstOrDefault(x => x.Id.Equals(request.Id));
 
         if(foo is not null)
         {
-            foo.Title = command.Title;
-            foo.IsCompleted = command.IsCompleted;
+            foo.Title = request.Title;
+            foo.IsCompleted = request.IsCompleted;
             foo.UpdatedAt = DateTimeOffset.Now;
 
             var changes = await _context.SaveChangesAsync(cancellationToken);
@@ -29,7 +29,7 @@ public class UpdateFooHandler
         }
         else
         {
-            throw new Exception($"Could not find Foo by id: {command.Id}");
+            throw new Exception($"Could not find Foo by id: {request.Id}");
         }
     }
 }
