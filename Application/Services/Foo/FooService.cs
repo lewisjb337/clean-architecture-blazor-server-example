@@ -1,10 +1,10 @@
 ﻿using Application.DTOs;
-using Application.Features.Foo.Commands.Create;
-using Application.Features.Foo.Commands.Delete;
-using Application.Features.Foo.Commands.Update;
-using Application.Features.Foo.Queries.Get;
-using Application.Features.Foo.Queries.GetById;
-using WebUI.Data.Migrations;
+using Models.Requests;
+using Persistence.Features.Foo.Commands.Create;
+using Persistence.Features.Foo.Commands.Delete;
+using Persistence.Features.Foo.Commands.Update;
+using Persistence.Features.Foo.Queries.Get;
+using Persistence.Features.Foo.Queries.GetById;
 
 namespace Application.Services.Foo;
 
@@ -35,7 +35,7 @@ public class FooService : IFooService
 
     public async Task<IList<FooDTO>> GetFooQueryAsync(CancellationToken cancellationToken)
     {
-        var foo = await _getFooQueryHandler.HandleAsync();
+        var foo = await _getFooQueryHandler.HandleAsync(cancellationToken);
 
         return foo.Select(x => new FooDTO
         {
@@ -47,7 +47,7 @@ public class FooService : IFooService
 
     public async Task<IList<FooDTO>> GetFooByIdQueryAsync(int id, CancellationToken cancellationToken)
     {
-        var foo = await _getFooByIdQueryHandler.HandleAsync(id);
+        var foo = await _getFooByIdQueryHandler.HandleAsync(id, cancellationToken);
 
         return foo.Select(x => new FooDTO
         {
@@ -59,7 +59,7 @@ public class FooService : IFooService
 
     public async Task<IList<FooDTO>> GetFooByUserIdQueryAsync(string id, CancellationToken cancellationToken)
     {
-        var foo = await _getFooByUserIdQueryHandler.HandleAsync(id);
+        var foo = await _getFooByUserIdQueryHandler.HandleAsync(id, cancellationToken);
 
         return foo.Select(x => new FooDTO
         {
@@ -69,18 +69,18 @@ public class FooService : IFooService
         }).ToList();
     }
 
-    public async Task AddFooAsync(CreateFooCommand command, CancellationToken cancellationToken)
+    public async Task AddFooAsync(FooRequest request, CancellationToken cancellationToken)
     {
-        await _createFooCommandHandler.HandleAsync(command);
+        await _createFooCommandHandler.HandleAsync(request, cancellationToken);
     }
 
-    public async Task UpdateFooAsync(UpdateFooCommand command, CancellationToken cancellationToken)
+    public async Task UpdateFooAsync(FooRequest request, CancellationToken cancellationToken)
     {
-        await _updateFooCommandHandler.HandleAsync(command);
+        await _updateFooCommandHandler.HandleAsync(request, cancellationToken);
     }
 
-    public void DeleteFooAsync(DeleteFooCommand command, CancellationToken cancellationToken)
+    public async Task DeleteFooAsync(FooRequest request, CancellationToken cancellationToken)
     {
-        _deleteFooCommandHandler.Handle(command);
+        await _deleteFooCommandHandler.Handle(request, cancellationToken);
     }
 }

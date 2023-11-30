@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RWfj0am6s5OfpKnKChQclo8cWHzqXOKCMn333xCxTvz5bmDkcpFCc2LFleTyi48EmL81CE3DAxQKwPFu0/zaFQ==",
+  "dgSpecHash": "Qh/erK96RnekiwpkocAwKx3uDxMy4SXImhK6SST0uChvaJ9V+ul+lktlPma7YjnSmYHGE9sbdE8jLwK61yeDmA==",
   "success": true,
-  "projectFilePath": "\\\\ast\\user$\\lewis.baxter\\My Documents\\GitHub\\clean-architecture-blazor-server-example\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\lewis.baxter\\Documents\\Repositories\\clean-architecture-blazor-server-example\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
