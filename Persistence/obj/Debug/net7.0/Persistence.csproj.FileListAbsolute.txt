@@ -28,3 +28,20 @@ C:\Users\lewis.baxter\source\repos\api\Clean Architecture - Basic Example\Persis
 \\ast\user$\lewis.baxter\My Documents\GitHub\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\refint\Persistence.dll
 \\ast\user$\lewis.baxter\My Documents\GitHub\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\Persistence.pdb
 \\ast\user$\lewis.baxter\My Documents\GitHub\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\ref\Persistence.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Persistence\bin\Debug\net7.0\Persistence.deps.json
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Persistence\bin\Debug\net7.0\Persistence.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Persistence\bin\Debug\net7.0\Persistence.pdb
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Persistence\bin\Debug\net7.0\Domain.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Persistence\bin\Debug\net7.0\Models.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Persistence\bin\Debug\net7.0\Domain.pdb
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Persistence\bin\Debug\net7.0\Models.pdb
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\Persistence.csproj.AssemblyReference.cache
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\Persistence.AssemblyInfoInputs.cache
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\Persistence.AssemblyInfo.cs
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\Persistence.csproj.CoreCompileInputs.cache
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\Persistence.csproj.CopyComplete
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\Persistence.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\refint\Persistence.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\Persistence.pdb
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Persistence\obj\Debug\net7.0\ref\Persistence.dll

@@ -4,11 +4,11 @@ using Persistence.Contexts;
 
 namespace Persistence.Features.Foo.Commands.Delete;
 
-public class DeleteFooCommandHandler
+public class DeleteFooHandler
 {
     private readonly ApplicationDbContext _context;
 
-    public DeleteFooCommandHandler(ApplicationDbContext context)
+    public DeleteFooHandler(ApplicationDbContext context)
     {
         _context = context;
     }

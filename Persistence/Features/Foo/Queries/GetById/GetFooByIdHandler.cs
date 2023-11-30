@@ -4,19 +4,19 @@ using Persistence.Contexts;
 
 namespace Persistence.Features.Foo.Queries.GetById;
 
-public class GetFooByUserIdQueryHandler
+public class GetFooByIdHandler
 {
     private readonly ApplicationDbContext _context;
 
-    public GetFooByUserIdQueryHandler(ApplicationDbContext context)
+    public GetFooByIdHandler(ApplicationDbContext context)
     {
         _context = context;
     }
 
-    public async Task<IList<FooResponse>> HandleAsync(string id, CancellationToken cancellationToken)
+    public async Task<IList<FooResponse>> HandleAsync(int id, CancellationToken cancellationToken)
     {
         return await _context.Foo
-            .Where(x => x.UserId.Equals(id))
+            .Where(x => x.Id.Equals(id))
             .Select(x => new FooResponse
             {
                 Id = x.Id,

@@ -1,15 +1,14 @@
-﻿using Domain.Entities.Foo;
-using Microsoft.EntityFrameworkCore;
-using Persistence.Contexts;
+﻿using Microsoft.EntityFrameworkCore;
 using Models.Responses;
+using Persistence.Contexts;
 
 namespace Persistence.Features.Foo.Queries.Get;
 
-public class GetFooQueryHandler
+public class GetFooHandler
 {
     private readonly ApplicationDbContext _context;
 
-    public GetFooQueryHandler(ApplicationDbContext context)
+    public GetFooHandler(ApplicationDbContext context)
     {
         _context = context;
     }

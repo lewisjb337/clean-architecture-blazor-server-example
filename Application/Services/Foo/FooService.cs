@@ -10,20 +10,20 @@ namespace Application.Services.Foo;
 
 public class FooService : IFooService
 {
-    private readonly CreateFooCommandHandler _createFooCommandHandler;
-    private readonly UpdateFooCommandHandler _updateFooCommandHandler;
-    private readonly DeleteFooCommandHandler _deleteFooCommandHandler;
-    private readonly GetFooQueryHandler _getFooQueryHandler;
-    private readonly GetFooByIdQueryHandler _getFooByIdQueryHandler;
-    private readonly GetFooByUserIdQueryHandler _getFooByUserIdQueryHandler;
+    private readonly CreateFooHandler _createFooCommandHandler;
+    private readonly UpdateFooHandler _updateFooCommandHandler;
+    private readonly DeleteFooHandler _deleteFooCommandHandler;
+    private readonly GetFooHandler _getFooQueryHandler;
+    private readonly GetFooByIdHandler _getFooByIdQueryHandler;
+    private readonly GetFooByUserIdHandler _getFooByUserIdQueryHandler;
 
     public FooService(
-        CreateFooCommandHandler createFooCommandHandler,
-        UpdateFooCommandHandler updateFooCommandHandler,
-        DeleteFooCommandHandler deleteFooCommandHandler,
-        GetFooQueryHandler getFooQueryHandler,
-        GetFooByIdQueryHandler getFooByIdQueryHandler,
-        GetFooByUserIdQueryHandler getFooByUserIdQueryHandler)
+        CreateFooHandler createFooCommandHandler,
+        UpdateFooHandler updateFooCommandHandler,
+        DeleteFooHandler deleteFooCommandHandler,
+        GetFooHandler getFooQueryHandler,
+        GetFooByIdHandler getFooByIdQueryHandler,
+        GetFooByUserIdHandler getFooByUserIdQueryHandler)
     {
         _createFooCommandHandler = createFooCommandHandler;
         _updateFooCommandHandler = updateFooCommandHandler;

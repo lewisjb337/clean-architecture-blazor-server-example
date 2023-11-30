@@ -1,0 +1,15 @@
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Models\bin\Debug\net7.0\Models.deps.json
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Models\bin\Debug\net7.0\Models.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Models\bin\Debug\net7.0\Models.pdb
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Models\bin\Debug\net7.0\Domain.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Models\bin\Debug\net7.0\Domain.pdb
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Models\obj\Debug\net7.0\Models.csproj.AssemblyReference.cache
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Models\obj\Debug\net7.0\Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Models\obj\Debug\net7.0\Models.AssemblyInfoInputs.cache
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Models\obj\Debug\net7.0\Models.AssemblyInfo.cs
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Models\obj\Debug\net7.0\Models.csproj.CoreCompileInputs.cache
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Models\obj\Debug\net7.0\Models.csproj.CopyComplete
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Models\obj\Debug\net7.0\Models.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Models\obj\Debug\net7.0\refint\Models.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Models\obj\Debug\net7.0\Models.pdb
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Models\obj\Debug\net7.0\ref\Models.dll

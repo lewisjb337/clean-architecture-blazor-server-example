@@ -25,7 +25,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI", "WebUI\WebUI.csproj
 		{CBAF234D-DE16-4E74-BCA0-E8F09056B54D} = {CBAF234D-DE16-4E74-BCA0-E8F09056B54D}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{A03FD004-A460-4BA7-8900-BF814DF4879E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{A03FD004-A460-4BA7-8900-BF814DF4879E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4B1F5405-3305-4994-8CA0-97A1F7A083F0} = {4B1F5405-3305-4994-8CA0-97A1F7A083F0}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

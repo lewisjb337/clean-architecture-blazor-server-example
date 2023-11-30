@@ -3,11 +3,11 @@ using Persistence.Contexts;
 
 namespace Persistence.Features.Foo.Commands.Update;
 
-public class UpdateFooCommandHandler
+public class UpdateFooHandler
 {
     private readonly ApplicationDbContext _context;
 
-    public UpdateFooCommandHandler(ApplicationDbContext context)
+    public UpdateFooHandler(ApplicationDbContext context)
     {
         _context = context;
     }

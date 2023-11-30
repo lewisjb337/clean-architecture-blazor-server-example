@@ -4,11 +4,11 @@ using Persistence.Contexts;
 
 namespace Persistence.Features.Foo.Commands.Create;
 
-public class CreateFooCommandHandler
+public class CreateFooHandler
 {
     private readonly ApplicationDbContext _context;
 
-    public CreateFooCommandHandler(ApplicationDbContext context)
+    public CreateFooHandler(ApplicationDbContext context)
     {
         _context = context;
     }
