@@ -13,13 +13,18 @@ public class CreateFooHandler
         _context = context;
     }
 
-    public async Task HandleAsync(FooRequest command, CancellationToken cancellationToken)
+    public async Task HandleAsync(FooRequest request, CancellationToken cancellationToken)
     {
         await _context.Foo.AddAsync(new FooEntity { 
-            UserId = command.UserId, 
-            Title = command.Title, 
-            IsCompleted = false, 
+            UserId = request.UserId, 
+            Title = request.Title, 
+            IsCompleted = request.IsCompleted, 
             CreatedAt = DateTimeOffset.Now 
         }, cancellationToken);
+
+        var changes = await _context.SaveChangesAsync(cancellationToken);
+
+        if (changes <= 0)
+            throw new Exception($"Failed to save changes for creation of: {request}");
     }
 }

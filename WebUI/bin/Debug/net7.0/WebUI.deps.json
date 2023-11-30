@@ -672,12 +672,21 @@
           "Domain.dll": {}
         }
       },
+      "Models/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "runtime": {
+          "Models.dll": {}
+        }
+      },
       "Persistence/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.11",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.11",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.11"
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.11",
+          "Models": "1.0.0"
         },
         "runtime": {
           "Persistence.dll": {}
@@ -1180,6 +1189,11 @@
       "sha512": ""
     },
     "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

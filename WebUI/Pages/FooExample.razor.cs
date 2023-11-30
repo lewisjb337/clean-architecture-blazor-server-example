@@ -16,8 +16,8 @@ public partial class FooExample
     [Inject]
     public UserContext? UserContext { get; set; }
 
-    private IList<FooDTO>? UserFoos { get; set; }
     private IList<FooDTO>? Foos { get; set; }
+
     string UserId = string.Empty;
 
     protected override async void OnInitialized()
@@ -34,9 +34,6 @@ public partial class FooExample
 
         if(user_id is not null)
             UserId = user_id;
-
-        if (user_id is not null)
-            UserFoos = await FooService.GetFooByUserIdQueryAsync(user_id);
 
         Foos = await FooService.GetFooQueryAsync();
 

@@ -18,5 +18,10 @@ public class DeleteFooHandler
         await _context.Foo
             .Where(x => x.Id.Equals(request.Id))
             .ExecuteDeleteAsync(cancellationToken);
+
+        var changes = await _context.SaveChangesAsync(cancellationToken);
+
+        if (changes <= 0)
+            throw new Exception($"Failed to save changes for deletion of: {request}");
     }
 }

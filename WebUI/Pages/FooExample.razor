@@ -2,28 +2,7 @@
 
 <PageTitle>Foo Example</PageTitle>
 
-<h3>User Foo List</h3>
-
 <button class="btn btn-primary" @onclick="AddData">Add Dummy Data</button>
-
-@if (UserFoos is not null)
-{
-    <ul>
-        @foreach (var foo in UserFoos)
-        {
-            <li>
-                <strong>@foo.Title</strong>
-                <p>ID: @foo.Id</p>
-            </li>
-        }
-    </ul>
-}
-else
-{
-    <p>No foos available.</p>
-}
-<br />
-<h3>Foo List</h3>
 
 @if (Foos is not null)
 {

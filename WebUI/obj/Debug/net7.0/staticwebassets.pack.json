@@ -1,59 +1,59 @@
 {
   "Files": [
     {
-      "Id": "\\\\ast\\user$\\lewis.baxter\\My Documents\\GitHub\\clean-architecture-blazor-server-example\\WebUI\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\WebUI.bundle.scp.css",
+      "Id": "C:\\Users\\lewis.baxter\\Documents\\Repositories\\clean-architecture-blazor-server-example\\WebUI\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\WebUI.bundle.scp.css",
       "PackagePath": "staticwebassets\\WebUI.bundle.scp.css"
     },
     {
-      "Id": "\\\\ast\\user$\\lewis.baxter\\My Documents\\GitHub\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\lewis.baxter\\Documents\\Repositories\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "\\\\ast\\user$\\lewis.baxter\\My Documents\\GitHub\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\lewis.baxter\\Documents\\Repositories\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "\\\\ast\\user$\\lewis.baxter\\My Documents\\GitHub\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Id": "C:\\Users\\lewis.baxter\\Documents\\Repositories\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "\\\\ast\\user$\\lewis.baxter\\My Documents\\GitHub\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Id": "C:\\Users\\lewis.baxter\\Documents\\Repositories\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "\\\\ast\\user$\\lewis.baxter\\My Documents\\GitHub\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\open-iconic\\README.md",
+      "Id": "C:\\Users\\lewis.baxter\\Documents\\Repositories\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\open-iconic\\README.md",
       "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
     },
     {
-      "Id": "\\\\ast\\user$\\lewis.baxter\\My Documents\\GitHub\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Id": "C:\\Users\\lewis.baxter\\Documents\\Repositories\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Id": "\\\\ast\\user$\\lewis.baxter\\My Documents\\GitHub\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Id": "C:\\Users\\lewis.baxter\\Documents\\Repositories\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Id": "\\\\ast\\user$\\lewis.baxter\\My Documents\\GitHub\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Id": "C:\\Users\\lewis.baxter\\Documents\\Repositories\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Id": "\\\\ast\\user$\\lewis.baxter\\My Documents\\GitHub\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Id": "C:\\Users\\lewis.baxter\\Documents\\Repositories\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Id": "\\\\ast\\user$\\lewis.baxter\\My Documents\\GitHub\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Id": "C:\\Users\\lewis.baxter\\Documents\\Repositories\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Id": "\\\\ast\\user$\\lewis.baxter\\My Documents\\GitHub\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Id": "C:\\Users\\lewis.baxter\\Documents\\Repositories\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Id": "\\\\ast\\user$\\lewis.baxter\\My Documents\\GitHub\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\lewis.baxter\\Documents\\Repositories\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "\\\\ast\\user$\\lewis.baxter\\My Documents\\GitHub\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\lewis.baxter\\Documents\\Repositories\\clean-architecture-blazor-server-example\\WebUI\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
