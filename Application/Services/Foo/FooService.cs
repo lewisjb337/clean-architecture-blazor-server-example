@@ -59,7 +59,7 @@ public class FooService : IFooService
 
             foreach (var foo in foos)
             {
-                var username = _userContext.Username(foo.UserId).Result.ToString();
+                var username = foo.UserId != null ? _userContext.Username(foo.UserId).Result.ToString() : null;
 
                 fooList.Add(new FooDTO
                 {
