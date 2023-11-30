@@ -1,4 +1,5 @@
 ﻿using Application.DTOs;
+using Microsoft.Extensions.Logging;
 using Models.Requests;
 using Persistence.Features.Foo.Commands.Create;
 using Persistence.Features.Foo.Commands.Delete;
@@ -17,13 +18,16 @@ public class FooService : IFooService
     private readonly GetFooByIdHandler _getFooByIdQueryHandler;
     private readonly GetFooByUserIdHandler _getFooByUserIdQueryHandler;
 
+    private readonly ILogger<FooService> _logger;
+
     public FooService(
         CreateFooHandler createFooCommandHandler,
         UpdateFooHandler updateFooCommandHandler,
         DeleteFooHandler deleteFooCommandHandler,
         GetFooHandler getFooQueryHandler,
         GetFooByIdHandler getFooByIdQueryHandler,
-        GetFooByUserIdHandler getFooByUserIdQueryHandler)
+        GetFooByUserIdHandler getFooByUserIdQueryHandler,
+        ILogger<FooService> logger)
     {
         _createFooCommandHandler = createFooCommandHandler;
         _updateFooCommandHandler = updateFooCommandHandler;
@@ -31,56 +35,126 @@ public class FooService : IFooService
         _getFooQueryHandler = getFooQueryHandler;
         _getFooByIdQueryHandler = getFooByIdQueryHandler;
         _getFooByUserIdQueryHandler = getFooByUserIdQueryHandler;
+        _logger = logger;
     }
 
     public async Task<IList<FooDTO>> GetFooQueryAsync(CancellationToken cancellationToken)
     {
-        var foo = await _getFooQueryHandler.HandleAsync(cancellationToken);
-
-        return foo.Select(x => new FooDTO
+        try
         {
-            Id = x.Id,
-            Title = x.Title,
-            IsCompleted = x.IsCompleted
-        }).ToList();
+            _logger.LogInformation($"Attempting to get all Foo");
+
+            var foo = await _getFooQueryHandler.HandleAsync(cancellationToken);
+
+            if (foo is null)
+                throw new Exception($"Could not find any Foo");
+
+            return foo.Select(x => new FooDTO
+            {
+                Id = x.Id,
+                Title = x.Title,
+                IsCompleted = x.IsCompleted
+            }).ToList();
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, $"Failed to get all Foo");
+            throw;
+        }
     }
 
     public async Task<IList<FooDTO>> GetFooByIdQueryAsync(int id, CancellationToken cancellationToken)
     {
-        var foo = await _getFooByIdQueryHandler.HandleAsync(id, cancellationToken);
-
-        return foo.Select(x => new FooDTO
+        try
         {
-            Id = x.Id,
-            Title = x.Title,
-            IsCompleted = x.IsCompleted
-        }).ToList();
+            _logger.LogInformation($"Attempting to get Foo by id: {id}");
+
+            var foo = await _getFooByIdQueryHandler.HandleAsync(id, cancellationToken);
+
+            if (foo is null)
+                throw new Exception($"Could not find any Foo with id: {id}");
+
+            return foo.Select(x => new FooDTO
+            {
+                Id = x.Id,
+                Title = x.Title,
+                IsCompleted = x.IsCompleted
+            }).ToList();
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, $"Failed to get Foo by id: {id}");
+            throw;
+        }
     }
 
     public async Task<IList<FooDTO>> GetFooByUserIdQueryAsync(string id, CancellationToken cancellationToken)
     {
-        var foo = await _getFooByUserIdQueryHandler.HandleAsync(id, cancellationToken);
-
-        return foo.Select(x => new FooDTO
+        try
         {
-            Id = x.Id,
-            Title = x.Title,
-            IsCompleted = x.IsCompleted
-        }).ToList();
+            _logger.LogInformation($"Attempting to get Foo by user id: {id}");
+
+            var foo = await _getFooByUserIdQueryHandler.HandleAsync(id, cancellationToken);
+
+            if (foo is null)
+                throw new Exception($"Could not find any Foo with user id: {id}");
+
+            return foo.Select(x => new FooDTO
+            {
+                Id = x.Id,
+                Title = x.Title,
+                IsCompleted = x.IsCompleted
+            }).ToList();
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, $"Failed to get Foo by user id: {id}");
+            throw;
+        }
     }
 
     public async Task AddFooAsync(FooRequest request, CancellationToken cancellationToken)
     {
-        await _createFooCommandHandler.HandleAsync(request, cancellationToken);
+        try
+        {
+            _logger.LogInformation($"Attempting to create Foo: {request}");
+            
+            await _createFooCommandHandler.HandleAsync(request, cancellationToken);
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, $"Failed to create Foo: {request}");
+            throw;
+        }
     }
 
     public async Task UpdateFooAsync(FooRequest request, CancellationToken cancellationToken)
     {
-        await _updateFooCommandHandler.HandleAsync(request, cancellationToken);
+        try
+        {
+            _logger.LogInformation($"Attempting to update Foo: {request}");
+
+            await _updateFooCommandHandler.HandleAsync(request, cancellationToken);
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, $"Failed to update Foo:{request}");
+            throw;
+        }
     }
 
     public async Task DeleteFooAsync(FooRequest request, CancellationToken cancellationToken)
     {
-        await _deleteFooCommandHandler.Handle(request, cancellationToken);
+        try
+        {
+            _logger.LogInformation($"Attempting to delete Foo: {request}");
+
+            await _deleteFooCommandHandler.Handle(request, cancellationToken);
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, $"Failed to delete Foo: {request}");
+            throw;
+        }
     }
 }
