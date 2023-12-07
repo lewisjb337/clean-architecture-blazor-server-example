@@ -281,3 +281,5 @@ C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-ex
 C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\WebUI\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Authorization.dll
 C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\WebUI\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
 C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\WebUI\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\WebUI\bin\Debug\net7.0\Request.Handlers.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\WebUI\bin\Debug\net7.0\Request.Handlers.pdb

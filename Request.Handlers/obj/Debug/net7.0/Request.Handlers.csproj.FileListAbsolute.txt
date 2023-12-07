@@ -1,0 +1,12 @@
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Request.Handlers\bin\Debug\net7.0\Request.Handlers.deps.json
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Request.Handlers\bin\Debug\net7.0\Request.Handlers.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Request.Handlers\bin\Debug\net7.0\Request.Handlers.pdb
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Request.Handlers\obj\Debug\net7.0\Request.Handlers.csproj.AssemblyReference.cache
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Request.Handlers\obj\Debug\net7.0\Request.Handlers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Request.Handlers\obj\Debug\net7.0\Request.Handlers.AssemblyInfoInputs.cache
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Request.Handlers\obj\Debug\net7.0\Request.Handlers.AssemblyInfo.cs
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Request.Handlers\obj\Debug\net7.0\Request.Handlers.csproj.CoreCompileInputs.cache
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Request.Handlers\obj\Debug\net7.0\Request.Handlers.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Request.Handlers\obj\Debug\net7.0\refint\Request.Handlers.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Request.Handlers\obj\Debug\net7.0\Request.Handlers.pdb
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Request.Handlers\obj\Debug\net7.0\ref\Request.Handlers.dll

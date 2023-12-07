@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RlQvXQaXDdAKl63urQMPXSXHl65XStwcXte44ExJ7WM9+WLtB1wFVqW24oHhEEQuDRrBEk+OFIdbI9cUBJuuog==",
+  "dgSpecHash": "IKuKSngCmpDGzJaavguORiA5FTHns+orTGdZ3jZGzRXntbLb15sepVBsa3D+RlGcvePwpsFj+pHjYfQtnsyu4w==",
   "success": true,
   "projectFilePath": "C:\\Users\\lewis.baxter\\Documents\\Repositories\\clean-architecture-blazor-server-example\\Application\\Application.csproj",
   "expectedPackageFiles": [

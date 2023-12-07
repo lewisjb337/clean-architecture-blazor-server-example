@@ -51,3 +51,5 @@ C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-ex
 C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Application\bin\Debug\net7.0\Models.pdb
 C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Application\obj\Debug\net7.0\Application.csproj.CopyComplete
 C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Application\obj\Debug\net7.0\ref\Application.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Application\bin\Debug\net7.0\Request.Handlers.dll
+C:\Users\lewis.baxter\Documents\Repositories\clean-architecture-blazor-server-example\Application\bin\Debug\net7.0\Request.Handlers.pdb

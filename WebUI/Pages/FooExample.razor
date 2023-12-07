@@ -2,7 +2,7 @@
 
 <PageTitle>Foo Example</PageTitle>
 
-<button class="btn btn-primary" @onclick="AddData">Add Dummy Data</button>
+<button class="btn btn-primary" @onclick="() => AddData()">Add Dummy Data</button>
 
 @if (Foos is not null)
 {
@@ -12,7 +12,6 @@
             <li>
                 <strong>@foo.Title</strong>
                 <p>ID: @foo.Id</p>
-                <p>By: @foo.Username</p>
             </li>
         }
     </ul>

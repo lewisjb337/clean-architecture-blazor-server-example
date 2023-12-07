@@ -1298,7 +1298,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Persistence": "1.0.0"
+          "Persistence": "1.0.0",
+          "Request.Handlers": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Application.dll": {}
@@ -1346,6 +1347,20 @@
         },
         "runtime": {
           "bin/placeholder/Persistence.dll": {}
+        }
+      },
+      "Request.Handlers/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "7.0.0",
+          "Microsoft.Extensions.Logging": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Request.Handlers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Request.Handlers.dll": {}
         }
       }
     }
@@ -3547,6 +3562,11 @@
       "type": "project",
       "path": "../Persistence/Persistence.csproj",
       "msbuildProject": "../Persistence/Persistence.csproj"
+    },
+    "Request.Handlers/1.0.0": {
+      "type": "project",
+      "path": "../Request.Handlers/Request.Handlers.csproj",
+      "msbuildProject": "../Request.Handlers/Request.Handlers.csproj"
     }
   },
   "projectFileDependencyGroups": {

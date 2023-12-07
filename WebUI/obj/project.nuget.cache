@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "r956wXWRCINDQ5BI7If8Ih/Rtz5KxaxVmz2qkAYmcq4VGox6XJV01gTYrsPinzSpqFyj/OkC8vVq2RviHTjMfg==",
+  "dgSpecHash": "W7r8NV/s6XR0vrXZBwtm8WMt5b+WVVu49Lj7ZE20VUMmpuokQ3RhhdQ7sVAxjt4oAAQdvKWV6y5FULGp4lrW7Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\lewis.baxter\\Documents\\Repositories\\clean-architecture-blazor-server-example\\WebUI\\WebUI.csproj",
   "expectedPackageFiles": [

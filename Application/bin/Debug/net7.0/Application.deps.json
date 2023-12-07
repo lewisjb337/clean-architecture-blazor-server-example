@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v7.0": {
       "Application/1.0.0": {
         "dependencies": {
-          "Persistence": "1.0.0"
+          "Persistence": "1.0.0",
+          "Request.Handlers": "1.0.0"
         },
         "runtime": {
           "Application.dll": {}
@@ -678,6 +679,15 @@
         "runtime": {
           "Persistence.dll": {}
         }
+      },
+      "Request.Handlers/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "7.0.0",
+          "Microsoft.Extensions.Logging": "7.0.0"
+        },
+        "runtime": {
+          "Request.Handlers.dll": {}
+        }
       }
     }
   },
@@ -1146,6 +1156,11 @@
       "sha512": ""
     },
     "Persistence/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Request.Handlers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "Y3LOtVb2LO1GT2odNyzBuft/SJrBMLmxdrTFXOE9XQwnpjCWSipey8BNr6Osa/yteLRYiNF9b9gEKTlaFeRxig==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lewis.baxter\\Documents\\Repositories\\clean-architecture-blazor-server-example\\Request.Handlers\\Request.Handlers.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lewis.baxter\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\lewis.baxter\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\lewis.baxter\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\lewis.baxter\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\lewis.baxter\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\lewis.baxter\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

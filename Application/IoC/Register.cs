@@ -1,5 +1,6 @@
-﻿using Application.Services.Foo;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Request.Handlers.IoC;
+using System.Reflection;
 
 namespace Application.IoC;
 
@@ -7,6 +8,6 @@ public static class Register
 {
     public static void RegisterApplicationServices(this IServiceCollection services)
     {
-        services.AddScoped<IFooService, FooService>();
+        services.UseRequestHandler(Assembly.GetExecutingAssembly());
     }
 }

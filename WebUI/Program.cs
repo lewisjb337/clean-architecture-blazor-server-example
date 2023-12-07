@@ -1,13 +1,11 @@
-using Microsoft.AspNetCore.Components.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Application.IoC;
+using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.EntityFrameworkCore;
 using Persistence.IoC;
 using Persistence.Contexts;
 using UserAdmin.Database.Models;
 using WebUI.Areas.Identity;
 using Persistence.Models;
-using WebUI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration
@@ -17,7 +15,7 @@ var config = builder.Configuration
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connectionString));
+    options.UseSqlServer(connectionString), ServiceLifetime.Singleton);
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<UserProfile>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
@@ -27,7 +25,6 @@ builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuth
 
 builder.Services.RegisterPersistenceServices(config.GetSection("ConnectionStrings").Get<DatabaseOptions>());
 builder.Services.RegisterApplicationServices();
-builder.Services.AddScoped<UserContext>();
 
 var app = builder.Build();
 
