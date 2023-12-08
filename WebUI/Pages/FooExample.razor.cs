@@ -42,11 +42,9 @@ public partial class FooExample
 
     public async Task AddData(CancellationToken cancellationToken = default)
     {
-        await Handler.ExecuteAsync<CreateFooRequest, FooResponse>(new CreateFooRequest
-        {
-            UserId = UserId,
-            Title = "Foo",
-        }, cancellationToken);
+        var request = new CreateFooRequest(UserId, "Foo", false);
+
+        await Handler.ExecuteAsync<CreateFooRequest, FooResponse>(request, cancellationToken);
 
         await LoadData(cancellationToken);
     }

@@ -18,7 +18,7 @@ public class CreateFooHandler : IHandler<CreateFooRequest, FooResponse>
 
     public async Task<FooResponse> HandleAsync(CreateFooRequest request, CancellationToken cancellationToken)
     {
-        await _context.Foo.AddAsync(new FooEntity {
+        var foo = await _context.Foo.AddAsync(new FooEntity {
             UserId = request.UserId,
             Title = request.Title, 
             IsCompleted = request.IsCompleted
@@ -29,6 +29,6 @@ public class CreateFooHandler : IHandler<CreateFooRequest, FooResponse>
         if (changes <= 0)
             throw new Exception($"Failed to save changes for creation of: {request}");
 
-        return new FooResponse();
+        return FooResponse.FromEntity(foo.Entity);
     }
 }

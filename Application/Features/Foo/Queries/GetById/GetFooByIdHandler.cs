@@ -1,5 +1,6 @@
 ﻿using Application.Entities.Requests;
 using Application.Entities.Responses;
+using Domain.Entities.Foo;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Contexts;
 using Request.Handlers.Contracts;
@@ -19,12 +20,14 @@ public class GetFooByIdHandler : IHandler<GetFooRequestById, IList<FooResponse>>
     {
         return await _context.Foo
             .Where(x => x.Id.Equals(request.Id))
-            .Select(x => new FooResponse
+            .Select(x => FooResponse.FromEntity(new FooEntity
             {
                 Id = x.Id,
                 UserId = x.UserId,
                 Title = x.Title,
-                IsCompleted = x.IsCompleted
-            }).ToListAsync(cancellationToken);
+                IsCompleted = x.IsCompleted,
+                CreatedAt = x.CreatedAt,
+                UpdatedAt = x.UpdatedAt
+            })).ToListAsync(cancellationToken);
     }
 }
