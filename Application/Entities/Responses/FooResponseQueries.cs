@@ -2,10 +2,4 @@
 
 public class FooResponseQueries {}
 
-public record FooResponse
-{
-    public int Id { get; set; }
-    public string UserId { get; set; } = string.Empty;
-    public string Title { get; set; } = string.Empty;
-    public bool IsCompleted { get; set; }
-}
+public record FooResponse(int Id, string UserId, string Title, bool IsCompleted);
